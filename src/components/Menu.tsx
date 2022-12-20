@@ -85,12 +85,12 @@ const Menu: FC<Props> = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
-        {/* <Link to="/" style={{ textDecoration: "none", color: "inherit" }}> */}
-        <Logo>
-          <Img src={MatanTube} alt="logo" />
-          MatanTube
-        </Logo>
-        {/* </Link> */}
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Logo>
+            <Img src={MatanTube} alt="logo" />
+            MatanTube
+          </Logo>
+        </Link>
         <Item>
           <HomeIcon />
           Home
@@ -115,12 +115,12 @@ const Menu: FC<Props> = ({ darkMode, setDarkMode }) => {
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe.
-          {/* <Link to="signin" style={{ textDecoration: "none" }}> */}
-          <Button>
-            <AccountCircleOutlinedIcon />
-            SIGN IN
-          </Button>
-          {/* </Link> */}
+          <Link to="signin" style={{ textDecoration: "none" }}>
+            <Button>
+              <AccountCircleOutlinedIcon />
+              SIGN IN
+            </Button>
+          </Link>
         </Login>
         <Hr />
         <Title>BEST OF MATANTUBE</Title>

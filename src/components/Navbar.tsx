@@ -6,7 +6,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 const Container = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.bgLighter};
+  background-color: ${({ theme }) => theme.bg};
   height: 56px;
 `;
 const Wrapper = styled.div`
@@ -57,12 +57,12 @@ const Navbar = () => {
           <Input placeholder="Search" />
           <SearchOutlinedIcon />
         </Search>
-        {/* <Link to="signin" style={{ textDecoration: "none" }}> */}
-        <Button>
-          <AccountCircleOutlinedIcon />
-          SIGN IN
-        </Button>
-        {/* </Link> */}
+        <Link to="signin" style={{ textDecoration: "none" }}>
+          <Button>
+            <AccountCircleOutlinedIcon />
+            SIGN IN
+          </Button>
+        </Link>
       </Wrapper>
     </Container>
   );
