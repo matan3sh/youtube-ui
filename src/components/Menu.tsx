@@ -21,9 +21,9 @@ import MatanTube from "../assets/images/logo.png";
 
 const Container = styled.div`
   flex: 1;
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.bg};
   height: 100vh;
-  color: white;
+  color: ${({ theme }) => theme.text};
   font-size: 14px;
   position: sticky;
   top: 0;
@@ -87,7 +87,7 @@ const Menu: FC<Props> = ({ darkMode, setDarkMode }) => {
       <Wrapper>
         {/* <Link to="/" style={{ textDecoration: "none", color: "inherit" }}> */}
         <Logo>
-          <Img src={MatanTube} />
+          <Img src={MatanTube} alt="logo" />
           MatanTube
         </Logo>
         {/* </Link> */}
@@ -123,7 +123,7 @@ const Menu: FC<Props> = ({ darkMode, setDarkMode }) => {
           {/* </Link> */}
         </Login>
         <Hr />
-        <Title>BEST OF LAMATUBE</Title>
+        <Title>BEST OF MATANTUBE</Title>
         <Item>
           <LibraryMusicOutlinedIcon />
           Music
@@ -161,7 +161,7 @@ const Menu: FC<Props> = ({ darkMode, setDarkMode }) => {
           <HelpOutlineOutlinedIcon />
           Help
         </Item>
-        <Item onClick={() => {}}>
+        <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           {darkMode ? "Light" : "Dark"} Mode
         </Item>
